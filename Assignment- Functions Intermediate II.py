@@ -50,7 +50,7 @@ def iterateDictionary2(key_name, some_list):
 iterateDictionary2('first_name', students)
 iterateDictionary2('last_name', students)
 
-# Iterate Through a Dictionary with List Values
+#4 Iterate Through a Dictionary with List Values
 # Create a function printInfo(some_dict) that given a dictionary whose values are all lists, prints the name of each key along with the size of its list, and then prints the associated values within each key's list. For example:
 
 dojo = {
