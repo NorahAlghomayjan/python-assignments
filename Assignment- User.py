@@ -13,39 +13,34 @@ class User:
     
     def make_deposit(self, amount):	
         self.account_balance += amount
+        return self
     
     def make_withdrawal(self, amount):
         self.account_balance -= amount
+        return self
 
     def display_user_balance(self):
         print(f"User: {self.name}, Balance: ${self.account_balance}")
+        return self
 
     def transfer_money(self, other_user, amount):
         self.account_balance -= amount
         other_user.make_deposit(amount)
+        return self
 
 Sarah = User("Sarah","guido@email.com")
 Samar = User("Samar","monty@email.com")
 Norah = User("Norah","Norah@email.com")
 
-Sarah.make_deposit(5000)
-Sarah.make_deposit(100)
-Sarah.make_deposit(20)
-Sarah.make_withdrawal(5)
-Sarah.display_user_balance()
+Sarah.make_deposit(5000).make_deposit(100).make_deposit(20).make_withdrawal(5).display_user_balance()
 
-Samar.make_deposit(50)
-Samar.make_deposit(100)
-Samar.make_withdrawal(2)
-Samar.make_withdrawal(3)
-Samar.display_user_balance()
 
-Norah.make_deposit(200000)
-Norah.make_withdrawal(5000)
-Norah.make_withdrawal(200)
-Norah.make_withdrawal(300)
-Norah.display_user_balance()
+Samar.make_deposit(50).make_deposit(100).make_withdrawal(2).make_withdrawal(3).display_user_balance()
 
-Sarah.transfer_money(Norah,200)
-Sarah.display_user_balance()
+
+Norah.make_deposit(200000).make_withdrawal(5000).make_withdrawal(200).make_withdrawal(300).display_user_balance()
+
+
+Sarah.transfer_money(Norah,200).display_user_balance()
+
 Norah.display_user_balance()
