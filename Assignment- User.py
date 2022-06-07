@@ -5,11 +5,11 @@
 from BankAccount import BankAccount
 
 class User:		
-    def __init__(self, name, email,Accounts=1):
+    def __init__(self, name, email,accounts=1):
         self.name = name
         self.email = email
         self.accounts = []
-        for i in range(Accounts):
+        for i in range(accounts):
             self.accounts.append(BankAccount(int_rate=0.02, balance=0))
     
     def make_deposit(self, amount, accountNum = 1):	
