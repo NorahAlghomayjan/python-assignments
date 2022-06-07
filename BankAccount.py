@@ -21,8 +21,4 @@ class BankAccount:
             self.balance += self.balance * self.int_rate
         return self
 
-account1 = BankAccount()
-account2 = BankAccount()
 
-account1.deposit(100).deposit(300).deposit(400).withdraw(50).yield_interest().display_account_info()
-account2.deposit(50).deposit(40).withdraw(20).withdraw(20).withdraw(40).withdraw(20).yield_interest().display_account_info()
